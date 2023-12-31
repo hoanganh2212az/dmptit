@@ -1,0 +1,743 @@
+body{
+    display: flex;
+    margin: 0;
+}
+
+/* Màu khi bôi đen chữ */
+::selection {
+    background:var(--green-color); 
+    color:var(--white-color);
+}
+
+/* CSS class home tổng */
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(nature.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Navigation bar */
+.navi_bar{
+    background-color: var(--white-color);
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Navibar/Logo Squir's Home */
+.logo{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    border-style: none solid;
+    border-width: 0px;
+    border-color: var(--green-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 0 0 20px;
+}
+
+.logo_image{
+    width: 25px;
+    height: 25px;
+    background-image: url(logoo.png);
+    background-color: var(--green-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+}
+.logo_text{
+    padding-left: 10px;
+    font-size: 1.0rem;
+}
+
+/* Navibar/Tên phòng */
+.room_name{
+    width: 10%;
+    height: 100%;
+    font-size: 1.0rem;
+    font-weight: 700;
+    border-style: none solid;
+    border-width: 0.05px;
+    border-color: var(--green-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navibar/Người tham gia phòng */
+.joiner{
+    width: 10%;
+    height: 100%;
+    border-style: none solid;
+    border-width: 0px;
+    border-color: var(--green-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    position: relative;
+}
+
+.joiner_ava{
+    width: 27px;
+    height: 27px;
+    border-radius: 100px;
+    border: 1.5px solid var(--white-color);
+    position: absolute;
+}
+
+.joiner_ava_1{
+    left: 20px;
+    z-index: 5;
+    background-color: var(--hardred-color);
+
+}
+
+.joiner_ava_2{
+    left: 36px;
+    z-index: 4;
+    background-color: var(--hardblue-color);
+
+}
+
+.joiner_ava_3{
+    left: 51px;
+    z-index: 3;
+    background-color: var(--hardgreen-color);
+
+}
+
+.joiner_ava_4{
+    left: 66px;
+    z-index: 2;
+    background-color: var(--hardyellow-color);
+
+}
+
+.joiner_ava_5{
+    left: 81px;
+    z-index: 1;
+    background-color: var(--hardpink-color);
+
+}
+
+
+
+/* Navibar/Các lựa chọn điều chỉnh giao diện */
+.option{
+    width: 20%;
+    height: 100%;
+    border-style: none solid;
+    border-width: 0.05px;
+    border-color: var(--green-color);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.option_icon{
+    font-size: 1.4rem;
+    color: var(--black-color);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+
+/* Lớp mới cho phóng to */
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+
+/* Navibar/Box điều chỉnh dừng/play nhạc */
+.play_box{
+    width: 10%;
+    height: 100%;
+    border-style: none solid;
+    border-width: 0px;
+    border-color: var(--green-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.play_box_icon{
+    border-radius: 100px;
+    width: 26%;
+    height: 80%;
+    color: var(--black-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+}
+
+/* Thêm gạch dọc cho dấu play */
+.fa-1{
+    transform: rotate(180deg);
+    border-right: 1.5px solid var(--black-color);
+}
+
+.fa-3{
+    border-right: 1.5px solid var(--black-color);
+}
+
+/* Căn nút play và pause ra giữa box */
+.play_box_icon_play, .play_box_icon_pause {
+    padding-left: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    top: 50; 
+    left: 50; 
+}
+
+/* Đặt nút forward bên phải */
+.play_box_icon_playforward {
+    right: 0;
+}
+
+/* Đặt nút backward bên trái */
+.play_box_icon_playback {
+    left: 0;
+}
+
+/* Hiện chuột khi trỏ vào các nút */
+.play_box_icon_play,
+.play_box_icon_playforward,
+.play_box_icon_playback,
+.play_box_icon_pause {
+    cursor: pointer;
+}
+
+/* Hover cho play box icon */
+.play_box_icon_play:hover,
+.play_box_icon_pause:hover,
+.play_box_icon_playforward:hover,
+.play_box_icon_playback:hover {
+    background-color: var(--mediumgrey-color);
+}
+
+
+/* Navibar/Profile và Cài đặt */
+.settings{
+    width: 10%;
+    border-style: none solid;
+    border-width: 0.05px;
+    border-color: var(--green-color);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    padding-right: 5px;
+    /* background-color: aqua; */
+}
+
+.settings_profile{
+    color: var(--black-color);
+    font-size: 1.3rem;
+    /* Căn profile về giữa theo chiều cao */
+    padding-top: 1px;
+}
+
+/* CSS BA DẤU CHẤM */
+#settings_bar-dot{
+    /* background-color: aqua; */
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.settings_bar-dotted{
+    width: 2.5px;
+    height: 2.5px;
+    background-color: var(--black-color);
+    border-radius: 70px;
+    margin: 1.2px;
+}
+
+/* Phần nhấn vào ba chấm hiện cửa sổ */
+#settings_bar{
+    position: relative;
+}
+
+#settings_list{
+    position: absolute;
+    right: -7px;
+    top: 35px;
+    display: none;
+}
+
+.settings_item{
+    width: 130px;
+    height: 60px;
+    border-radius: 0 0 0 9px;
+    background-color: var(--white-color);
+    border: 1px solid var(--black-color);
+}
+
+.settings_item_text{
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
+
+.settings_item_1{
+    text-decoration: none;
+    color: var(--black-color);
+    border-bottom: 1px solid var(--black-color);
+    height: 50%;
+}
+
+.settings_item_1:hover{
+    color: var(--green-color);
+}
+
+.settings_item_2{
+    text-decoration: none;
+    color: var(--black-color);
+    height: 50%;
+}
+
+.settings_item_2:hover{
+    color: var(--green-color);
+}
+
+/*Box hiển thị tên âm thanh đang phát */
+.songname{
+    width: 200px;
+    height: 50px;
+    color: var(--white-color);
+    font-style: bold;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 59%;
+    left: 41%;
+    top: 45px;
+}
+
+
+/* Menu option */
+.menu{
+    width: 55px;
+    /* height: 320px; */
+    height: 55%;
+    min-height: 307px;
+    background-color: var(--white-color);
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    left: 0;
+    top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.menu_icon{
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--black-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu_icon:hover{
+    color: var(--green-color);
+    background-color: var(--lightgreen-color);
+    border-color: var(--green-color);
+}
+
+.menu_icon_text{
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.menu_icon_1{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timebox{
+    background-color: var(--white-color);
+    width: 200px;
+    height: 180px;
+    position: absolute;
+    right: 0;
+    top: 20vh;
+    margin-right: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.timebox_1{
+    height: 20%;
+    border-bottom: 1px solid var(--black-color);
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.timebox_2{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.timecount{
+    width: 80%;
+    height: 50px;
+    font-size: 4.0rem;
+    font-weight: 700;
+    background-color: var(--lightgreen-color);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.study_option{
+    width: 80%;
+    height: 50px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+}
+.study_option-1{
+    width: 45%;
+    background-color:var(--lightgreen-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.study_option-2{
+    width: 45%;
+    background-color: var(--lightgreen-color);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.study_option-icon{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.menu_icon_2{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_icon_3{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_icon_4{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_icon_5{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Join phòng học khác */
+
+.friendroom{
+    width: 220px;
+    height: 40px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    padding: 0 5px;
+    border-radius: 0 10px 10px 0;
+}
+
+.friendroom_id{
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 1.0rem;
+}
+
+.friendroom_id-2{
+    font-weight: 600;
+}
+
+.fa-copy:hover{
+    color: var(--green-color);
+    cursor: pointer;
+}
+
+.friendroom_box_1{
+    width: 100px;
+    height: 22px;
+    background-color: var(--lightgreen-color);
+    border-radius: 10px;
+    border: none;
+    padding-inline: 7px;
+}
+
+.friendroom_go{
+    width: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.friendroom_go:hover{
+    color: var(--green-color);
+}
+
+/* Mic và tin nhắn */
+.micboxinbox{
+    width: 126px;
+    height: 45px;
+    /* background-color: var(--lightgreen-color); */
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    bottom: 10vh;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.fa-solid, .fa-microphone-slash, .a {
+    display:none;
+}
+
+.play_box_icon_micbox{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: var(--white-color);
+    opacity: 0.7;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.play_box_icon_inbox{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: var(--white-color);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.play_box_icon_micbox:hover{
+    opacity: 1;
+}
+
+.play_box_icon_inbox:hover{
+    opacity: 1;
+}
+
+
+/* Box hiện tên người tham gia phòng */
+.joinername{
+    width: 180px;
+    height: 100px;
+    /* background-color: var(--lightgreen-color); */
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    bottom: 130px;
+    right: 0;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: right;
+    font-style: italic;
+}
+
+.joinername_text{
+    margin-right: 8px;
+    font-weight: 600;
+}
+.joinername_1{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    color: var(--hardred-color);
+
+}
+
+.joinername_2{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    color: var(--hardblue-color);
+}
+
+.joinername_3{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    color: var(--hardgreen-color);
+}
+
+.joinername_4{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    color: var(--hardyellow-color);
+}
+
+.joinername_5{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    color: var(--hardpink-color);
+}
+
+/* ÂM THANH */
+#sound_container {
+    width: 369px;
+    height: 520px;
+    margin: 50px auto;
+    padding: 0px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-left: 200px;
+    margin-top: 200px;
+    overflow-y:auto;
+    scrollbar-width: thin;
+    scrollbar-color: darkseagreen #f0f0f0;
+    position: absolute;
+}
+
+#sound_container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sound_container header{
+    font-size: 20px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.sound_container .audio_content {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    white-space: nowrap;
+    overflow-x:auto;
+}
+
+.audio h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    background-color:darkseagreen;
+    padding: 3px;
+    border-radius: 10px;
+    height: 24px;
+    width: 180px;
+    text-align: center; 
+}
+.audio img {
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    padding: 0px;
+    object-fit: cover;
+    margin-left: 3px;
+    margin-right: 0px;
+    display: inline-block;
+}

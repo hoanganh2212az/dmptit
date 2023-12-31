@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập</title>
+    <style>
+        /* CSS để thiết kế giao diện */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #login-container {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+        #warning {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h1>Đăng Nhập</h1>
+        <input type="text" id="username" placeholder="Tên người dùng">
+        <br>
+        <input type="password" id="password" placeholder="Mật khẩu">
+        <br>
+        <p id="warning">Vui lòng nhập thông tin tài khoản đăng nhập!</p>
+        <button onclick="login()">Tiếp Tục</button>
+    </div>
+
+    <script>
+        // JavaScript để xử lý sự kiện đăng nhập và hiển thị cảnh báo
+        function login() {
+            const usernameInput = document.getElementById("username");
+            const passwordInput = document.getElementById("password");
+            const warning = document.getElementById("warning");
+
+            // Kiểm tra xem có thông tin tài khoản đăng nhập được nhập hay không
+            if (usernameInput.value === "" || passwordInput.value === "") {
+                warning.style.display = "block";
+            } else {
+                warning.style.display = "none";
+                // Thực hiện các hành động đăng nhập nếu thông tin hợp lệ
+                // (trong thực tế, bạn sẽ thực hiện kiểm tra và xử lý tại đây)
+                alert("Đăng nhập thành công!");
+            }
+        }
+    </script>
+</body>
+</html>
