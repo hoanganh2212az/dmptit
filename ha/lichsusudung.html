@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lịch sử sử dụng</title>
+        <meta charset="utf-8">
+        <script src="chucnang_dienthongtin.js"></script>
+        <script src="chucnang_thayava.js"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="switchoffon.css">
+    </head>
+
+    <style>
+        /* Style cho phan sidebar_user_info */
+        .user-info img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            margin-bottom: 100px;
+            margin-top: 100px;
+        }
+
+        .user-info {
+            display:flex;
+            flex-direction: column;;
+            align-items: center;
+        }
+
+        #user-name {
+            margin-top: 100px;
+            font-weight: bold;
+            font-size: 2em;
+            color: white;
+            align-items: center;
+        }
+
+        p {
+            color: white;
+            align-items: center;
+            font-style: italic;
+            font-size: 1em;
+        }
+
+    </style>
+
+    <body>
+        <div class="sidebar">
+            <div class="user-info">
+                <input type="file" id="avatarInput" style="display: none;" accept="image/*" onchange="changeAvatar(event)">
+                <label for="avatarInput">
+                    <img src="ava.jpg" alt="Avatar" width="300" id="avatarImage">
+                </label>
+
+                <div class="user-details">
+                    <span id="user-name"></span>
+                </div>
+
+                <p>Học, học nữa, học mãi</p>
+            </div>
+
+            <div class="sidebar__option">
+                    <a href="index.html" class="sidebar__op__text">Thông tin cá nhân</a>
+                    <a href="lichsusudung.html" class="sidebar__op__text sidebar__op__choose">Lịch sử sử dụng</a>
+            </div>
+
+            <div class="sidebar__icon">
+                <div class="sidebar__icon__icon1">
+                    <a href="" class="sidebar__icon__link">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </div>
+                <div class="sidebar__icon__icon2">
+                    <a href="" class="sidebar__icon__link">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="content">
+                <div class="content__title">Lịch sử sử dụng</div>
+                <div class="content__nd">
+                    <h2>Lịch sử đăng nhập</h2>
+                    <canvas id="login-chart"></canvas>
+                </div>
+            </div>
+    <body>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // JavaScript
+            // Dữ liệu mẫu cho biểu đồ cột - Giữ nguyên
+            var loginData = {
+                labels: ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ nhật"],
+                datasets: [
+                    {
+                        label: "Làm bài tập",
+                        backgroundColor: "#76A77A",
+                        data: [2, 3, 1, 2, 4, 3, 5],
+                    },
+                    {
+                        label: "Làm đề",
+                        backgroundColor: "#9DC08B",
+                        data: [1, 2, 2, 1, 3, 2, 4],
+                    },
+                ],
+            };
+   
+    
+            // Cấu hình biểu đồ
+            var ctx = document.getElementById("login-chart").getContext("2d");
+            var loginChart = new Chart(ctx, {
+                type: "bar",
+                data: loginData,
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                        },
+                    },
+                },
+            });
+        </script>
+</body>
+</html>

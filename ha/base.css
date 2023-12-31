@@ -1,0 +1,41 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --beige-color: #EDF1D6;
+    --green-color:#76A77A;
+    --lightgreen-color: #E6EFE7;
+    --red-color: #EE5656;
+    --grey-color: #989898;
+    --lightgrey-color: #EEEEEE;
+    --mediumgrey-color: #D9D9D9;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    /* Tương đương 10px */
+    font-size: 62.5%;
+    line-height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+/* 
+Chuẩn bị responsive
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+} */
