@@ -1,0 +1,222 @@
+body{
+    display: flex;
+    margin: 0;
+}
+
+/* CSS cho sidebar */
+
+.sidebar{
+    width: 25%;
+    height: 100vh;
+    min-width: 238px;
+    min-height: 492px;
+    font-size: 1.4rem;
+    background-color: var(--green-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__back{
+    width: 80%;
+    color: var(--white-color);
+    padding: 20px 0 20px 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+/* .sidebar__back__arrow:hover{
+    cursor: pointer;
+}
+
+.sidebar__back__arrow--back{
+    color: var(--white-color)
+}
+
+.sidebar__back__text:hover{
+    cursor: default;
+} */
+
+.sidebar__icon__link{
+    color: var(--white-color);
+    font-size: 2.0rem;
+}
+
+.sidebar__option{
+    width: 80%;
+    height: 60%;
+    min-width: 185px;
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* DÙNG VỚI BUTTON NHƯNG KHÔNG TỐI ƯU VÌ PHẢI NHẤP VÀO TẬN CHỮ MỚI CÓ THỂ CHUYỂN
+    .btn{
+    width: 85%;
+    height: 47px;
+    background-color: transparent;
+    border: 1px solid var(--beige-color);
+    border-radius: 50px;
+    color: var(--white-color);
+}
+
+.btn:hover{
+    background-color: var(--beige-color);
+    color: var(--green-color);
+    cursor: pointer;
+} */
+
+/* Làm thuộc tính hover khi nhấp vào box */
+
+.sidebar__op__text{
+    width: 85%;
+    height: 47px;
+    background-color: transparent;
+    border: 1px solid var(--beige-color);
+    border-radius: 50px;
+    color: var(--white-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar__op__text:hover{
+    background-color: var(--beige-color);
+    color: var(--green-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sidebar__op__choose{
+    width: 85%;
+    height: 47px;
+    background-color: var(--beige-color);
+    font-size: 1.4rem !important;
+    color: var(--green-color);
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar__icon{
+    width: 80%;
+    color: var(--white-color);
+    padding: 20px 0 20px 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.sidebar__icon__icon2:hover{
+    cursor: pointer;
+}
+
+/* CSS cho content */
+.content{
+    width: 75%;
+    height: 100vh;
+    min-width: 674px;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__title{
+    width: 95%;
+    background-color: var(--white-color);
+    padding: 40px 20px 40px 20px;
+    font-size: 4rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.content__nd{
+    width: 95%;
+    flex: 1;
+    background-color: var(--white-color);
+    padding: 40px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    width: 100%;
+    background-color: var(--lightgreen-color);
+    border-radius: 50px;
+    margin-block: 10px;
+    
+}
+
+.box1{
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.box2{
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+.content__nd__box1{
+    width: 100%;
+    height: 45px;
+    border-radius: 50px;
+    margin-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box1__text{
+    width: 90%;
+    height: 45px;
+    background-color: var(--lightgreen-color);
+    border-radius: 50px;
+    padding-left: 40px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/*  ĐẶT LẠI MẬT KHẨU */
+.content__nd__pass1{
+    height: 45px;
+    background-color: var(--lightgreen-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 30px;
+    font-weight: 400;
+    border: 0;
+}
+
+.content__nd__text{
+    font-style: italic;
+}
+
+/* VỀ CHÚNG TÔI */
+.content__nd__vechungtoi{
+    margin-top: 40px;
+    width: 90%;
+    height: 60px;
+    /* background-color: aquamarine; */
+    text-align: justify;
+    font-size: 1.4rem;
+}
